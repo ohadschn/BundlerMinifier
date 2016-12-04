@@ -50,7 +50,7 @@ Any edits being made to the source files will instantly produce
 updated bundle file output.
 
 The bundle configuration is stored in a file called `bundleconfig.json`
-which gets added to the root of the project.
+which gets added to the root of the project. You can examine its schema in the [JSON Schema Store](http://json.schemastore.org/bundleconfig).
 
 ### Minification
 
@@ -98,8 +98,7 @@ A `.map` file is produced next to the `.min.js` file automatically,
 but if you manually delete the `.map` file, a new one will not be
 created on subsequent minifications.
 
-To enable source maps, add this property to the `bundleconfig.json`
-file:
+To enable source maps for an output file, add the following property to its `bundleconfig.json` section (as a sibling of `inputFiles` and `outputFileName`):
 
 ```json
 "sourceMap": true
